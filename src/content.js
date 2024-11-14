@@ -1,10 +1,6 @@
-// const btn = document.createElement("BUTTON")
-// const t = document.createTextNode("CLICK ME");
-// btn.appendChild(t);
-
-// document.body.appendChild(btn);
-
+debugger
 const iframe = document.createElement("iframe");
-//iframe.style.display = "none";
-iframe.src = chrome.extension.getUrl("index.html/#/frame");
+iframe.style.width = "100%";
+iframe.style.height = "5%";
+iframe.src = chrome.runtime.getURL("index.html#/frame");
 document.body.appendChild(iframe);

@@ -8,7 +8,9 @@
         "type": "module"
     },
     "permissions": [
-        "tabs"
+        "tabs",
+        "activeTab",
+        "scripting"
     ],
     "content_scripts": [
         {
@@ -16,7 +18,17 @@
                 "src/content.js"
             ],
             "matches": [
-                "<all_urls>"
+                "https://wikipedia.org/*"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "index.html"
+            ],
+            "matches": [
+                "https://wikipedia.org/*"
             ]
         }
     ]
