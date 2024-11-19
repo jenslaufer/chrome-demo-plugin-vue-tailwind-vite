@@ -18,7 +18,6 @@ onMounted(() => {
             if (chrome.runtime.lastError) {
                 console.error('Error sending message:', chrome.runtime.lastError.message)
             } else if (response.success) {
-                console.log('Received greeting:', response.content)
                 messages.value = response.content
             } else {
                 console.error('Error in response:', response.error)
