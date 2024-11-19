@@ -7,6 +7,10 @@
         "service_worker": "src/service_worker.js",
         "type": "module"
     },
+    "permissions": [
+        "scripting",
+        "activeTab"
+    ],
     "content_scripts": [
         {
             "js": [
