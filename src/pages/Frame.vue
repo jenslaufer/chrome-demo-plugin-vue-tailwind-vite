@@ -1,9 +1,10 @@
 <template>
-    <div class="bg-black">
-        <h1 class="text-sm font-bold p-20 text-gray-100">
-            Frame
+    <div class="bg-blue-400">
+        <h1 class="text-2xl font-bold pt-6 px-6 text-black">
+            This bar is from the H1 Extractor Chrome Extension
         </h1>
-        <div class="text-gray-100 p-20">
+        <div class="text-black px-6 py-4">
+            <p>H1 headlines:</p>
             <p v-for="(message, index) in messages" :key="index">{{ message }}</p>
         </div>
     </div>
@@ -11,7 +12,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 
-const messages = ref([""]);
+const messages = ref(["500"]);
 onMounted(() => {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
         chrome.tabs.sendMessage(tabs[0].id, { action: 'getContent' }, (response) => {
