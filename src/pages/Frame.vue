@@ -3,7 +3,7 @@
         <h1 class="text-2xl font-bold pt-6 px-6 text-black">
             This bar is from the H1 Extractor Chrome Extension
         </h1>
-        <div class="text-black px-6 py-4">
+        <div class="text-black px-6 py-4 text-lg">
             <p>H1 headlines:</p>
             <p v-for="(message, index) in messages" :key="index">{{ message }}</p>
         </div>
